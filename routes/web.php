@@ -9,6 +9,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ExportController;
 use App\Http\Controllers\BarangKeluarController;
 use App\Http\Controllers\BarangHampirHabisController;
+use App\Http\Controllers\AnalyticsController;
 use Illuminate\Support\Facades\Route;
 
 //Route::get('/', function () {
@@ -42,6 +43,8 @@ Route::get('/barang-keluar/export/excel', [BarangKeluarController::class, 'expor
 Route::get('/barang-keluar/export/pdf', [BarangKeluarController::class, 'exportPdf'])->name('barangKeluar.exportPdf');
 
 Route::get('/barang-hampir-habis', [BarangHampirHabisController::class, 'index'])->name('barang.hampir.habis');
+Route::get('/dashboard/analisis', [AnalyticsController::class, 'index'])->name('dashboard.analisis');
+Route::get('/admin/analytics/realtime', [AnalyticsController::class, 'realtime'])->name('analytics.realtime');
 
 
 

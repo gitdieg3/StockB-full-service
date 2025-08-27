@@ -15,4 +15,6 @@ class TipeBarang extends Model
     {
         return $this->hasMany(Barang::class, 'tipe_barang_id');
     }
+
+    
 }

@@ -13,13 +13,13 @@
                     <span class="align-middle">Dashboard</span>
                 </a>
             </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" ">
-                    <i class=" align-middle" data-feather="bar-chart-2"></i>
-                    <span class="align-middle">Charts</span>
+            <li class="sidebar-item {{ request()->routeIs('dashboard.analisis') ? 'active' : '' }}">
+                <a class="sidebar-link" href="{{ route('dashboard.analisis') }}">
+                    <i class="align-middle" data-feather="bar-chart-2"></i>
+                    <span class="align-middle">Analytics</span>
                 </a>
             </li>
+
 
             <li class="sidebar-item {{ request()->routeIs('barang.index') ? 'active' : '' }}">
                 <a class="sidebar-link" href="{{ route('barang.index') }}">
